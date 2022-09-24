@@ -1,0 +1,1460 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: none;
+}
+
+img {
+  border-style: none;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section,
+main {
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+  text-decoration: none;
+  color: #000;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/**
+* Remove the inheritance of text transform in Edge, Firefox, and IE.
+* 1. Remove the inheritance of text transform in Firefox.
+*/
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+* Show the overflow in IE.
+* 1. Show the overflow in Edge.
+*/
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+* Correct the inability to style clickable types in iOS and Safari.
+*/
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+  * Remove the inner border and padding in Firefox.
+  */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+  * Restore the focus styles unset by the previous rule.
+  */
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+  * Correct the padding in Firefox.
+  */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+/**
+  * Remove the default vertical scrollbar in IE 10+.
+  */
+textarea {
+  overflow: auto;
+}
+
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+* Correct the cursor style of increment and decrement buttons in Chrome.
+*/
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+* 1. Correct the odd appearance in Chrome and Safari.
+* 2. Correct the outline style in Safari.
+*/
+[type=search] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+* Remove the inner padding in Chrome and Safari on macOS.
+*/
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+* 1. Correct the inability to style clickable types in iOS and Safari.
+* 2. Change font properties to `inherit` in Safari.
+*/
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+  ========================================================================== */
+/*
+* Add the correct display in Edge, IE 10+, and Firefox.
+*/
+details {
+  display: block;
+}
+
+/*
+* Add the correct display in all browsers.
+*/
+summary {
+  display: list-item;
+}
+
+/* Misc
+  ========================================================================== */
+/**
+* Add the correct display in IE 10+.
+*/
+template {
+  display: none;
+}
+
+/**
+* Add the correct display in IE 10.
+*/
+[hidden] {
+  display: none;
+}
+
+.container {
+  width: 90%;
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col {
+  flex: 1 0 0%;
+}
+
+.col-0 {
+  flex: 0 0 0%;
+}
+
+.col-offset-0 {
+  margin-left: 0%;
+}
+
+.col-1 {
+  flex: 0 0 8.3333333333%;
+}
+
+.col-offset-1 {
+  margin-left: 8.3333333333%;
+}
+
+.col-2 {
+  flex: 0 0 16.6666666667%;
+}
+
+.col-offset-2 {
+  margin-left: 16.6666666667%;
+}
+
+.col-3 {
+  flex: 0 0 25%;
+}
+
+.col-offset-3 {
+  margin-left: 25%;
+}
+
+.col-4 {
+  flex: 0 0 33.3333333333%;
+}
+
+.col-offset-4 {
+  margin-left: 33.3333333333%;
+}
+
+.col-5 {
+  flex: 0 0 41.6666666667%;
+}
+
+.col-offset-5 {
+  margin-left: 41.6666666667%;
+}
+
+.col-6 {
+  flex: 0 0 50%;
+}
+
+.col-offset-6 {
+  margin-left: 50%;
+}
+
+.col-7 {
+  flex: 0 0 58.3333333333%;
+}
+
+.col-offset-7 {
+  margin-left: 58.3333333333%;
+}
+
+.col-8 {
+  flex: 0 0 66.6666666667%;
+}
+
+.col-offset-8 {
+  margin-left: 66.6666666667%;
+}
+
+.col-9 {
+  flex: 0 0 75%;
+}
+
+.col-offset-9 {
+  margin-left: 75%;
+}
+
+.col-10 {
+  flex: 0 0 83.3333333333%;
+}
+
+.col-offset-10 {
+  margin-left: 83.3333333333%;
+}
+
+.col-11 {
+  flex: 0 0 91.6666666667%;
+}
+
+.col-offset-11 {
+  margin-left: 91.6666666667%;
+}
+
+.col-12 {
+  flex: 0 0 100%;
+}
+
+.col-offset-12 {
+  margin-left: 100%;
+}
+
+@media screen and (min-width: 576px) {
+  .col-sm-0 {
+    flex: 0 0 0%;
+  }
+  .col-sm-offset-0 {
+    margin-left: 0%;
+  }
+  .col-sm-1 {
+    flex: 0 0 8.3333333333%;
+  }
+  .col-sm-offset-1 {
+    margin-left: 8.3333333333%;
+  }
+  .col-sm-2 {
+    flex: 0 0 16.6666666667%;
+  }
+  .col-sm-offset-2 {
+    margin-left: 16.6666666667%;
+  }
+  .col-sm-3 {
+    flex: 0 0 25%;
+  }
+  .col-sm-offset-3 {
+    margin-left: 25%;
+  }
+  .col-sm-4 {
+    flex: 0 0 33.3333333333%;
+  }
+  .col-sm-offset-4 {
+    margin-left: 33.3333333333%;
+  }
+  .col-sm-5 {
+    flex: 0 0 41.6666666667%;
+  }
+  .col-sm-offset-5 {
+    margin-left: 41.6666666667%;
+  }
+  .col-sm-6 {
+    flex: 0 0 50%;
+  }
+  .col-sm-offset-6 {
+    margin-left: 50%;
+  }
+  .col-sm-7 {
+    flex: 0 0 58.3333333333%;
+  }
+  .col-sm-offset-7 {
+    margin-left: 58.3333333333%;
+  }
+  .col-sm-8 {
+    flex: 0 0 66.6666666667%;
+  }
+  .col-sm-offset-8 {
+    margin-left: 66.6666666667%;
+  }
+  .col-sm-9 {
+    flex: 0 0 75%;
+  }
+  .col-sm-offset-9 {
+    margin-left: 75%;
+  }
+  .col-sm-10 {
+    flex: 0 0 83.3333333333%;
+  }
+  .col-sm-offset-10 {
+    margin-left: 83.3333333333%;
+  }
+  .col-sm-11 {
+    flex: 0 0 91.6666666667%;
+  }
+  .col-sm-offset-11 {
+    margin-left: 91.6666666667%;
+  }
+  .col-sm-12 {
+    flex: 0 0 100%;
+  }
+  .col-sm-offset-12 {
+    margin-left: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .col-md-0 {
+    flex: 0 0 0%;
+  }
+  .col-md-offset-0 {
+    margin-left: 0%;
+  }
+  .col-md-1 {
+    flex: 0 0 8.3333333333%;
+  }
+  .col-md-offset-1 {
+    margin-left: 8.3333333333%;
+  }
+  .col-md-2 {
+    flex: 0 0 16.6666666667%;
+  }
+  .col-md-offset-2 {
+    margin-left: 16.6666666667%;
+  }
+  .col-md-3 {
+    flex: 0 0 25%;
+  }
+  .col-md-offset-3 {
+    margin-left: 25%;
+  }
+  .col-md-4 {
+    flex: 0 0 33.3333333333%;
+  }
+  .col-md-offset-4 {
+    margin-left: 33.3333333333%;
+  }
+  .col-md-5 {
+    flex: 0 0 41.6666666667%;
+  }
+  .col-md-offset-5 {
+    margin-left: 41.6666666667%;
+  }
+  .col-md-6 {
+    flex: 0 0 50%;
+  }
+  .col-md-offset-6 {
+    margin-left: 50%;
+  }
+  .col-md-7 {
+    flex: 0 0 58.3333333333%;
+  }
+  .col-md-offset-7 {
+    margin-left: 58.3333333333%;
+  }
+  .col-md-8 {
+    flex: 0 0 66.6666666667%;
+  }
+  .col-md-offset-8 {
+    margin-left: 66.6666666667%;
+  }
+  .col-md-9 {
+    flex: 0 0 75%;
+  }
+  .col-md-offset-9 {
+    margin-left: 75%;
+  }
+  .col-md-10 {
+    flex: 0 0 83.3333333333%;
+  }
+  .col-md-offset-10 {
+    margin-left: 83.3333333333%;
+  }
+  .col-md-11 {
+    flex: 0 0 91.6666666667%;
+  }
+  .col-md-offset-11 {
+    margin-left: 91.6666666667%;
+  }
+  .col-md-12 {
+    flex: 0 0 100%;
+  }
+  .col-md-offset-12 {
+    margin-left: 100%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .col-lg-0 {
+    flex: 0 0 0%;
+  }
+  .col-lg-offset-0 {
+    margin-left: 0%;
+  }
+  .col-lg-1 {
+    flex: 0 0 8.3333333333%;
+  }
+  .col-lg-offset-1 {
+    margin-left: 8.3333333333%;
+  }
+  .col-lg-2 {
+    flex: 0 0 16.6666666667%;
+  }
+  .col-lg-offset-2 {
+    margin-left: 16.6666666667%;
+  }
+  .col-lg-3 {
+    flex: 0 0 25%;
+  }
+  .col-lg-offset-3 {
+    margin-left: 25%;
+  }
+  .col-lg-4 {
+    flex: 0 0 33.3333333333%;
+  }
+  .col-lg-offset-4 {
+    margin-left: 33.3333333333%;
+  }
+  .col-lg-5 {
+    flex: 0 0 41.6666666667%;
+  }
+  .col-lg-offset-5 {
+    margin-left: 41.6666666667%;
+  }
+  .col-lg-6 {
+    flex: 0 0 50%;
+  }
+  .col-lg-offset-6 {
+    margin-left: 50%;
+  }
+  .col-lg-7 {
+    flex: 0 0 58.3333333333%;
+  }
+  .col-lg-offset-7 {
+    margin-left: 58.3333333333%;
+  }
+  .col-lg-8 {
+    flex: 0 0 66.6666666667%;
+  }
+  .col-lg-offset-8 {
+    margin-left: 66.6666666667%;
+  }
+  .col-lg-9 {
+    flex: 0 0 75%;
+  }
+  .col-lg-offset-9 {
+    margin-left: 75%;
+  }
+  .col-lg-10 {
+    flex: 0 0 83.3333333333%;
+  }
+  .col-lg-offset-10 {
+    margin-left: 83.3333333333%;
+  }
+  .col-lg-11 {
+    flex: 0 0 91.6666666667%;
+  }
+  .col-lg-offset-11 {
+    margin-left: 91.6666666667%;
+  }
+  .col-lg-12 {
+    flex: 0 0 100%;
+  }
+  .col-lg-offset-12 {
+    margin-left: 100%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .col-xl-0 {
+    flex: 0 0 0%;
+  }
+  .col-xl-offset-0 {
+    margin-left: 0%;
+  }
+  .col-xl-1 {
+    flex: 0 0 8.3333333333%;
+  }
+  .col-xl-offset-1 {
+    margin-left: 8.3333333333%;
+  }
+  .col-xl-2 {
+    flex: 0 0 16.6666666667%;
+  }
+  .col-xl-offset-2 {
+    margin-left: 16.6666666667%;
+  }
+  .col-xl-3 {
+    flex: 0 0 25%;
+  }
+  .col-xl-offset-3 {
+    margin-left: 25%;
+  }
+  .col-xl-4 {
+    flex: 0 0 33.3333333333%;
+  }
+  .col-xl-offset-4 {
+    margin-left: 33.3333333333%;
+  }
+  .col-xl-5 {
+    flex: 0 0 41.6666666667%;
+  }
+  .col-xl-offset-5 {
+    margin-left: 41.6666666667%;
+  }
+  .col-xl-6 {
+    flex: 0 0 50%;
+  }
+  .col-xl-offset-6 {
+    margin-left: 50%;
+  }
+  .col-xl-7 {
+    flex: 0 0 58.3333333333%;
+  }
+  .col-xl-offset-7 {
+    margin-left: 58.3333333333%;
+  }
+  .col-xl-8 {
+    flex: 0 0 66.6666666667%;
+  }
+  .col-xl-offset-8 {
+    margin-left: 66.6666666667%;
+  }
+  .col-xl-9 {
+    flex: 0 0 75%;
+  }
+  .col-xl-offset-9 {
+    margin-left: 75%;
+  }
+  .col-xl-10 {
+    flex: 0 0 83.3333333333%;
+  }
+  .col-xl-offset-10 {
+    margin-left: 83.3333333333%;
+  }
+  .col-xl-11 {
+    flex: 0 0 91.6666666667%;
+  }
+  .col-xl-offset-11 {
+    margin-left: 91.6666666667%;
+  }
+  .col-xl-12 {
+    flex: 0 0 100%;
+  }
+  .col-xl-offset-12 {
+    margin-left: 100%;
+  }
+}
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.375rem 1.75rem;
+  font-size: 1rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn-primary {
+  background: #f7d300;
+  border-radius: 8px;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.3rem 2.4375rem;
+}
+
+.border {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+}
+
+.btn-rounded, .btn-rounded-secondary, .btn-rounded-outline-category, .btn-rounded-outline-primary, .btn-rounded-primary {
+  border-radius: 48px;
+  font-size: 15px;
+}
+
+.btn-rounded-primary {
+  background: #566cfb;
+  color: #fff;
+  margin-bottom: 5px;
+}
+.btn-rounded-primary:hover {
+  background: transparent;
+  color: #566cfb;
+  border: 1px solid #566cfb;
+}
+
+@media screen and (min-width: 992px) {
+  .btn {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+}
+.btn-rounded-outline-primary {
+  background: transparent;
+  color: #566cfb;
+  font-weight: 700;
+  font-size: 1.3rem;
+  border-color: #566cfb;
+}
+.btn-rounded-outline-primary:hover {
+  background: #566cfb;
+  color: #fff;
+}
+
+.btn-rounded-outline-category {
+  background: transparent;
+  color: #888B8D;
+  border-color: #888B8D;
+}
+.btn-rounded-outline-category:hover {
+  background: #888B8D;
+  color: #fff;
+}
+
+.btn-secondary {
+  color: #fff;
+  background: #a07178;
+}
+
+.btn-rounded-secondary {
+  background: #a07178;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.btn-outline-primary {
+  background: transparent;
+  color: #566cfb;
+  border-color: #566cfb;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+header .container .upper,
+header .container .lower {
+  display: flex;
+  justify-content: space-between;
+}
+header .container .lower {
+  margin-top: 1.125rem;
+}
+header .container .lower .welcome a {
+  color: #0061A3;
+}
+header .container .socials {
+  display: none;
+}
+
+.nav {
+  display: none;
+}
+
+@media screen and (min-width: 1920px) {
+  header {
+    margin-top: 1.875rem;
+  }
+  header .container {
+    display: flex;
+    position: relative;
+    gap: 1.81rem;
+  }
+  header .container .upper img:nth-child(1), header .container .upper img:nth-child(3) {
+    display: none;
+  }
+  header .container .lower {
+    flex-direction: column;
+  }
+  header .container .socials {
+    position: absolute;
+    right: 0;
+    display: block;
+    align-items: flex-end;
+  }
+  header .container .socials .icon-group,
+header .container .socials .lang {
+    display: flex;
+  }
+  header .container .socials .icon-group {
+    gap: 0.625rem;
+  }
+  header .container .socials .lang {
+    gap: 0.5rem;
+    align-items: center;
+  }
+  .nav {
+    display: block;
+    margin-top: 1rem;
+  }
+  .nav .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "nav nav nav nav btn";
+  }
+  .nav .container ul {
+    grid-area: nav;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.56rem;
+    background-color: #f30000;
+    color: #fff;
+    padding: 0.46rem 1.5rem;
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+  }
+  .nav .container ul hr {
+    height: 100%;
+    margin: 0;
+  }
+  .nav .container p {
+    grid-area: btn;
+    background: #0061A3;
+    color: #fff;
+    padding: 0.46rem 1.5rem;
+    border-radius: 8px;
+    margin-left: -1rem;
+  }
+}
+.banner {
+  margin-top: 1.5rem;
+}
+.banner img {
+  width: 100%;
+  object-fit: cover;
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
+.features {
+  margin-top: 1rem;
+}
+.features .container .card {
+  display: flex;
+  gap: 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 5px;
+  margin-bottom: 0.75rem;
+}
+.features .container .card .content .upper-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 0.56rem;
+}
+.features .container .card .content .upper-content h3 {
+  font-weight: 500;
+}
+.features .container .card .content .upper-content a {
+  color: #0061A3;
+  font-weight: 500;
+  font-size: 0.81rem;
+  text-decoration: underline;
+}
+.features .container .card .content .lower-content {
+  font-size: 0.875rem;
+  line-height: 1rem;
+  color: #5f5f5f;
+}
+
+@media screen and (min-width: 1920px) {
+  .features .container {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+}
+.offers {
+  margin-top: 1.875rem;
+}
+.offers .container h1 {
+  font-weight: 500;
+  font-size: 1.125rem;
+  margin-bottom: 1.125rem;
+}
+.offers .container .offer-card-container .offer-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 0.9375rem;
+}
+.offers .container .offer-card-container .offer-card .upper {
+  display: flex;
+  margin-left: 1.5rem;
+  gap: 2.25rem;
+}
+.offers .container .offer-card-container .offer-card .upper .text {
+  margin: 1.125rem 0 1.187rem;
+}
+.offers .container .offer-card-container .offer-card .upper .text .text-upper {
+  display: flex;
+  gap: 0.5rem;
+}
+.offers .container .offer-card-container .offer-card .upper .text .text-upper img {
+  margin-bottom: 0.75rem;
+}
+.offers .container .offer-card-container .offer-card .upper .text .text-upper h3 {
+  font-weight: 500;
+}
+.offers .container .offer-card-container .offer-card .upper .text .money {
+  font-size: 1.5rem;
+  line-height: 1.375rem;
+  font-weight: 700;
+  color: #13902a;
+}
+.offers .container .offer-card-container .offer-card .lower {
+  background: #0061A3;
+  mix-blend-mode: normal;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.offers .container .offer-card-container .offer-card .lower .container {
+  display: flex;
+  gap: 3.125rem;
+  padding: 0.9rem 0 0.75rem;
+}
+
+@media screen and (min-width: 1920px) {
+  .offers .container h1 {
+    font-size: 1.5rem;
+  }
+  .offers .container .offer-card-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .offers .container .offer-card-container .offer-card {
+    width: 23.75rem;
+  }
+}
+.lottery {
+  margin-top: 2rem;
+}
+.lottery .container .lottery-title {
+  background: #f30000;
+  color: #fff;
+  text-align: center;
+  padding: 0.8125rem 0;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+.lottery .container .lottery-card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.lottery .container .lottery-card-container .desktop {
+  display: none !important;
+}
+.lottery .container .lottery-card-container .lottery-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.lottery .container .lottery-card-container .lottery-card .star {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+}
+.lottery .container .lottery-card-container .lottery-card .lottery-logo {
+  margin: 1rem 0 0.5rem;
+}
+.lottery .container .lottery-card-container .lottery-card .text {
+  margin: 1.125rem 0 0.625rem;
+}
+.lottery .container .lottery-card-container .lottery-card .text .text-upper {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.lottery .container .lottery-card-container .lottery-card .text .text-upper h3 {
+  font-weight: 500;
+}
+.lottery .container .lottery-card-container .lottery-card .text .money {
+  font-size: 1.5rem;
+  line-height: 1.375rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.lottery .container .lottery-card-container .lottery-card .text .time {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+.lottery .container .lottery-card-container .lottery-card .text .time p {
+  color: #0061A3;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+.lottery .container .lottery-link {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.75rem;
+}
+.lottery .container .lottery-link a {
+  color: #0061A3 !important;
+  font-weight: 500;
+  text-decoration: underline;
+  font-size: 1.2rem;
+}
+.lottery .container .lottery-link a:nth-child(2) {
+  display: none;
+}
+
+@media screen and (min-width: 1920px) {
+  .lottery .container .lottery-card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+  .lottery .container .lottery-card-container .desktop {
+    display: flex !important;
+  }
+  .lottery .container .lottery-link a:nth-child(1) {
+    display: none;
+  }
+  .lottery .container .lottery-link a:nth-child(2) {
+    display: block;
+  }
+}
+.winners {
+  margin-top: 2rem;
+}
+.winners .container .biggest-winners .winners-title {
+  background: #f30000;
+  color: #fff;
+  text-align: center;
+  padding: 0.8125rem 0;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+.winners .container .biggest-winners .winners-content {
+  padding: 1rem;
+  margin-top: 2rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+}
+.winners .container .biggest-winners .winners-content .top-content {
+  display: flex;
+  gap: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+.winners .container .biggest-winners .winners-content .top-content h2 {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 1.687rem;
+  font-weight: 500;
+}
+.winners .container .biggest-winners .winners-content .top-content h2 .euro {
+  color: #0061A3;
+}
+.winners .container .biggest-winners .winners-content .win-img {
+  width: 100%;
+  margin-bottom: 1.09rem;
+}
+.winners .container .biggest-winners .winners-content .uk-lotto {
+  margin-bottom: 1rem;
+}
+.winners .container .biggest-winners .winners-content .uk-lotto .lotto-result {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.winners .container .biggest-winners .winners-content .uk-lotto .lotto-result h2 {
+  font-weight: 500;
+}
+.winners .container .biggest-winners .winners-content .uk-lotto .lotto-result .lotto-cutd .pills {
+  display: flex;
+  gap: 0.2rem;
+}
+.winners .container .biggest-winners .winners-content .uk-lotto .lotto-result .lotto-cutd .pills p {
+  display: grid;
+  place-items: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  background: #f30000;
+  border-radius: 50%;
+  color: #fff;
+}
+.winners .container .biggest-winners .winners-content .uk-lotto .lotto-result .lotto-cutd .date {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+.winners .container .biggest-winners .winners-content .text-content .text-title {
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+.winners .container .biggest-winners .winners-content .text-content p {
+  font-size: 0.875rem;
+  line-height: 1.31rem;
+}
+.winners .container .biggest-winners .winners-content .text-content a {
+  color: #0061A3 !important;
+  font-weight: 500;
+  font-size: 0.875rem;
+  display: block;
+  text-align: center;
+  text-decoration: underline;
+  margin: 0.75rem 0 1rem;
+}
+.winners .container .biggest-winners .winners-content .text-content button {
+  width: 14.5rem;
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+}
+.winners .container .latest-winners {
+  margin-top: 2rem;
+}
+.winners .container .latest-winners .winners-title {
+  background: #f30000;
+  color: #fff;
+  text-align: center;
+  padding: 0.8125rem 0;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+.winners .container .latest-winners .total-prize {
+  text-align: center;
+}
+.winners .container .latest-winners .total-prize h2 {
+  margin: 0.3125rem 0;
+}
+.winners .container .latest-winners .total-prize h2:nth-child(1) {
+  font-size: 1.125rem;
+}
+.winners .container .latest-winners .total-prize h2:nth-child(2) {
+  font-size: 1.625rem;
+  font-weight: 700;
+  color: #13902a;
+}
+.winners .container .latest-winners .total-prize h2:nth-child(3) span {
+  font-size: 1.625rem;
+  font-weight: 500;
+}
+.winners .container .latest-winners .winner-container {
+  margin-top: 1rem;
+  height: 27.8125rem;
+  background: #fff;
+  overflow: hidden;
+}
+.winners .container .latest-winners .winner-container .winner-card {
+  display: flex;
+  padding: 0.625rem 1rem;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+.winners .container .latest-winners .winner-container .winner-card .win-text p {
+  font-size: 0.875rem;
+  margin-bottom: 0.4rem;
+}
+.winners .container .latest-winners .winner-container .winner-card .win-text p:nth-child(2) {
+  display: flex;
+  gap: 0.4rem;
+}
+.winners .container .latest-winners .winner-container .winner-card .win-text p:nth-child(2) span {
+  font-weight: 500;
+}
+.winners .container .latest-winners .winner-container .winner-card .win-text p:nth-child(3) {
+  color: #5f5f5f;
+}
+
+@media screen and (min-width: 1920px) {
+  .winners .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1.5rem 1fr;
+    grid-template-areas: "big big big . lat";
+    align-items: flex-start;
+  }
+  .winners .container .biggest-winners {
+    grid-area: big;
+  }
+  .winners .container .biggest-winners .winners-content .top-content {
+    margin-left: 10.8rem;
+  }
+  .winners .container .biggest-winners .winners-content .win-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 3rem;
+    gap: 2.68rem;
+  }
+  .winners .container .biggest-winners .winners-content .win-wrapper .text-content .text-title {
+    font-size: 1rem;
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+  .winners .container .biggest-winners .winners-content .win-wrapper .text-content p {
+    width: 14.5rem;
+    margin-bottom: 2rem;
+  }
+  .winners .container .latest-winners {
+    grid-area: lat;
+    margin-top: 0;
+  }
+  .winners .container .latest-winners .winner-container {
+    height: 18rem;
+  }
+}
+.faq {
+  display: none;
+}
+
+@media screen and (min-width: 1920px) {
+  .faq {
+    display: block;
+    margin-top: 3rem;
+  }
+  .faq .container h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+  }
+  .faq .container .faq-list {
+    width: 48.5rem;
+  }
+  .faq .container .faq-list li {
+    display: flex;
+    justify-content: space-between;
+    color: #0061A3;
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin-left: 1.8rem;
+  }
+  .faq .container .faq-list hr {
+    margin-bottom: 2rem;
+  }
+}
+.footer {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.footer .live-chat {
+  position: relative;
+}
+.footer .live-chat .container {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+}
+.footer .live-chat .container .whatsapp {
+  display: flex;
+  gap: 1rem;
+}
+.footer .live-chat .container .whatsapp div h2 {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.footer .live-chat .container .whatsapp div p {
+  font-size: 0.75rem;
+}
+.footer .container h2 {
+  font-weight: 500;
+}
+.footer .container .useful-link {
+  margin-top: 0.75rem;
+  display: flex;
+  gap: 1rem;
+}
+.footer .container .useful-link ul li {
+  font-size: 0.875rem;
+  margin-bottom: 0.3125rem;
+}
+.footer .container .smart-winner {
+  margin-top: 1.25rem;
+}
+.footer .container .smart-winner h2 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+.footer .container .smart-winner p {
+  font-size: 0.625rem;
+  line-height: 0.875rem;
+  margin-bottom: 0.23rem;
+}
+.footer .container .payment-security {
+  margin-top: 1.25rem;
+  display: flex;
+  gap: 2.5rem;
+}
+.footer .container .payment-security .bottom-desktop {
+  display: none;
+}
+.footer .container .payment-security .payments h2 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+.footer .container .payment-security .payments .payment-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.625rem;
+}
+.footer .container .payment-security .security h2 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+.footer .container .payment-security .security .security-card .top {
+  display: flex;
+  gap: 0.3rem;
+}
+.footer .container .payment-security .security .security-card .bottom {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.3rem;
+}
+
+@media screen and (min-width: 1920px) {
+  .footer {
+    margin-bottom: 4rem;
+  }
+  .footer h2 {
+    font-size: 1rem;
+  }
+  .footer .live-chat {
+    max-width: 75rem;
+    margin: 0 auto;
+  }
+  .footer .live-chat .star-bg {
+    width: 100%;
+    height: 17rem;
+    object-fit: cover;
+  }
+  .footer .container article {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .footer .container article .useful-link {
+    flex-direction: column;
+    gap: 0;
+  }
+  .footer .container article .smart-winner {
+    width: 15.5rem;
+    margin-top: -1rem;
+    z-index: 99999;
+  }
+  .footer .container article .payment-security {
+    flex-direction: column;
+    width: 9.5rem;
+    margin: 0;
+  }
+  .footer .container article .payment-security .bottom-desktop {
+    margin-top: -5rem;
+    display: flex;
+    gap: 0.3rem;
+    z-index: 999999;
+  }
+  .footer .container article .payment-security .security .security-card .bottom {
+    display: none;
+  }
+}
+.question {
+  display: none;
+}
+
+@media screen and (min-width: 1920px) {
+  .question {
+    display: block;
+    position: absolute;
+    top: 3rem;
+    left: 1.375rem;
+  }
+  .question h2 {
+    font-size: 1.2rem;
+    color: #f30000;
+    font-weight: 500;
+    margin-bottom: 1.2rem;
+  }
+  .question .con, .question .sales {
+    margin-bottom: 1.2rem;
+  }
+  .question .what {
+    font-size: 1.2rem;
+    color: #13902a;
+    font-weight: 500;
+  }
+}/*# sourceMappingURL=style.css.map */

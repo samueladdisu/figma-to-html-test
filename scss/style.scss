@@ -1,0 +1,859 @@
+@import "reboot";
+@import "mixins";
+@import "utilities";
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  .container {
+
+    .upper,
+    .lower {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .lower {
+      margin-top: 1.125rem;
+
+      .welcome {
+        a {
+          color: #0061A3;
+        }
+      }
+    }
+
+    .socials {
+      display: none;
+    }
+  }
+}
+
+.nav {
+  display: none;
+}
+
+@include responsive($xxl) {
+  header {
+    margin-top: 1.875rem;
+
+    .container {
+      display: flex;
+      position: relative;
+      gap: 1.81rem;
+
+      .upper {
+        img {
+
+          &:nth-child(1),
+          &:nth-child(3) {
+            display: none;
+          }
+        }
+      }
+
+      .lower {
+        flex-direction: column;
+      }
+
+      .socials {
+        position: absolute;
+        right: 0;
+        display: block;
+        align-items: flex-end;
+
+        .icon-group,
+        .lang {
+          display: flex;
+        }
+
+        .icon-group {
+          gap: 0.625rem;
+        }
+
+        .lang {
+          gap: 0.5rem;
+          align-items: center;
+        }
+      }
+    }
+  }
+
+  .nav {
+    display: block;
+    margin-top: 1rem;
+
+    .container {
+      display: grid;
+      // align-items: center;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-areas: "nav nav nav nav btn";
+
+      ul {
+        grid-area: nav;
+        display: flex;
+        align-items: flex-start;
+        gap: 1.56rem;
+        background-color: #f30000;
+        color: #fff;
+        padding: 0.46rem 1.5rem;
+        border-bottom-left-radius: 8px;
+        border-top-left-radius: 8px;
+
+        hr {
+          height: 100%;
+          margin: 0;
+        }
+      }
+
+      p {
+        grid-area: btn;
+        background: #0061A3;
+        color: #fff;
+        padding: 0.46rem 1.5rem;
+        border-radius: 8px;
+        margin-left: -1rem;
+      }
+    }
+  }
+}
+
+.banner {
+  margin-top: 1.5rem;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+    max-width: 75rem;
+    margin: 0 auto;
+  }
+}
+
+.features {
+  margin-top: 1rem;
+
+  .container {
+    .card {
+      display: flex;
+      gap: 1rem;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 5px;
+      margin-bottom: .75rem;
+
+      .content {
+        .upper-content {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+          margin-bottom: 0.56rem;
+
+          h3 {
+            font-weight: 500;
+          }
+
+          a {
+            color: #0061A3;
+            font-weight: 500;
+            font-size: 0.81rem;
+            text-decoration: underline;
+          }
+        }
+
+        .lower-content {
+          font-size: 0.875rem;
+          line-height: 1rem;
+          color: #5f5f5f;
+        }
+      }
+    }
+  }
+}
+
+@include responsive($xxl) {
+  .features {
+    .container {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+  }
+}
+
+.offers {
+  margin-top: 1.875rem;
+
+  .container {
+    h1 {
+      font-weight: 500;
+      font-size: 1.125rem;
+      margin-bottom: 1.125rem;
+    }
+
+    .offer-card-container {
+      .offer-card {
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        margin-bottom: 0.9375rem;
+
+        .upper {
+          display: flex;
+          margin-left: 1.5rem;
+          gap: 2.25rem;
+
+          .text {
+            margin: 1.125rem 0 1.187rem;
+
+            .text-upper {
+              display: flex;
+              gap: 0.5rem;
+
+              img {
+                margin-bottom: 0.75rem;
+              }
+
+              h3 {
+                font-weight: 500;
+              }
+            }
+
+            .money {
+              font-size: 1.5rem;
+              line-height: 1.375rem;
+              font-weight: 700;
+              color: #13902a;
+            }
+          }
+        }
+
+        .lower {
+          background: #0061A3;
+          mix-blend-mode: normal;
+          border-bottom-left-radius: 8px;
+          border-bottom-right-radius: 8px;
+
+          .container {
+            display: flex;
+            gap: 3.125rem;
+            padding: 0.9rem 0 0.75rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include responsive($xxl) {
+  .offers {
+    .container {
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .offer-card-container {
+        display: flex;
+        justify-content: space-between;
+
+        .offer-card {
+          width: 23.75rem;
+        }
+      }
+    }
+  }
+}
+
+.lottery {
+  margin-top: 2rem;
+
+  .container {
+    .lottery-title {
+      background: #f30000;
+      color: #fff;
+      text-align: center;
+      padding: 0.8125rem 0;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .lottery-card-container {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+
+      .desktop {
+        display: none !important;
+      }
+
+      .lottery-card {
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .star {
+          position: absolute;
+          right: 0.5rem;
+          top: 0.5rem;
+        }
+
+        .lottery-logo {
+          margin: 1rem 0 0.5rem;
+        }
+
+        .text {
+          margin: 1.125rem 0 0.625rem;
+
+          .text-upper {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+
+            h3 {
+              font-weight: 500;
+            }
+          }
+
+          .money {
+            font-size: 1.5rem;
+            line-height: 1.375rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+          }
+
+          .time {
+            display: flex;
+            justify-content: center;
+            margin-bottom: .5rem;
+
+            p {
+              color: #0061A3;
+              font-size: 0.875rem;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+
+    .lottery-link {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 0.75rem;
+
+      a {
+        color: #0061A3 !important;
+        font-weight: 500;
+        text-decoration: underline;
+        font-size: 1.2rem;
+
+        &:nth-child(2) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@include responsive($xxl) {
+  .lottery {
+    .container {
+      .lottery-card-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+        .desktop {
+          display: flex !important;
+        }
+      }
+
+      .lottery-link {
+        a {
+          &:nth-child(1) {
+            display: none;
+          }
+
+          &:nth-child(2) {
+            display: block;
+          }
+        }
+
+      }
+    }
+  }
+}
+
+.winners {
+  margin-top: 2rem;
+
+  .container {
+    .biggest-winners {
+
+
+      .winners-title {
+        background: #f30000;
+        color: #fff;
+        text-align: center;
+        padding: 0.8125rem 0;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+      }
+
+      .winners-content {
+        padding: 1rem;
+        margin-top: 2rem;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+
+        .top-content {
+          display: flex;
+          gap: 1.25rem;
+          margin-bottom: 0.75rem;
+
+          h2 {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+            font-size: 1.687rem;
+            font-weight: 500;
+
+            .euro {
+              color: #0061A3;
+            }
+          }
+        }
+
+        .win-img {
+          width: 100%;
+          margin-bottom: 1.09rem;
+        }
+
+        .uk-lotto {
+          margin-bottom: 1rem;
+
+          .lotto-result {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+
+            h2 {
+              font-weight: 500;
+            }
+
+            .lotto-cutd {
+              .pills {
+                display: flex;
+                gap: 0.2rem;
+
+                p {
+                  display: grid;
+                  place-items: center;
+                  width: 1.75rem;
+                  height: 1.75rem;
+                  background: #f30000;
+                  border-radius: 50%;
+                  color: #fff;
+                }
+
+              }
+
+              .date {
+                display: flex;
+                justify-content: center;
+                margin-top: .5rem;
+              }
+            }
+          }
+
+        }
+
+        .text-content {
+          .text-title {
+            text-align: center;
+            font-weight: 500;
+            margin-bottom: .5rem;
+          }
+
+          p {
+            font-size: 0.875rem;
+            line-height: 1.31rem;
+          }
+
+          a {
+            color: #0061A3 !important;
+            font-weight: 500;
+            font-size: 0.875rem;
+            display: block;
+            text-align: center;
+            text-decoration: underline;
+            margin: 0.75rem 0 1rem;
+          }
+
+          button {
+            width: 14.5rem;
+            margin: 0 auto;
+            display: grid;
+            place-items: center;
+          }
+        }
+      }
+
+    }
+
+    .latest-winners {
+      margin-top: 2rem;
+
+      .winners-title {
+        background: #f30000;
+        color: #fff;
+        text-align: center;
+        padding: 0.8125rem 0;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+      }
+
+      .total-prize {
+        text-align: center;
+
+        h2 {
+          margin: 0.3125rem 0;
+
+          &:nth-child(1) {
+            font-size: 1.125rem;
+
+          }
+
+          &:nth-child(2) {
+            font-size: 1.625rem;
+            font-weight: 700;
+            color: #13902a;
+          }
+
+          &:nth-child(3) {
+            span {
+              font-size: 1.625rem;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+
+      .winner-container {
+        margin-top: 1rem;
+        height: 27.8125rem;
+        background: #fff;
+        overflow: hidden;
+
+        .winner-card {
+          display: flex;
+          padding: 0.625rem 1rem;
+          gap: 1rem;
+          margin-bottom: 0.5rem;
+
+          .win-text {
+            p {
+              font-size: 0.875rem;
+              margin-bottom: 0.4rem;
+
+              &:nth-child(2) {
+                display: flex;
+                gap: 0.4rem;
+
+                span {
+                  font-weight: 500;
+
+                }
+              }
+
+              &:nth-child(3) {
+                color: #5f5f5f;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include responsive($xxl) {
+  .winners {
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1.5rem 1fr;
+      grid-template-areas: "big big big . lat";
+      align-items: flex-start;
+
+      .biggest-winners {
+        grid-area: big;
+
+        .winners-content {
+          .top-content {
+            margin-left: 10.8rem;
+          }
+
+          .win-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin-left: 3rem;
+            gap: 2.68rem;
+
+            .text-content {
+              .text-title {
+                font-size: 1rem;
+                text-align: left;
+                margin-bottom: 1rem;
+              }
+
+              p {
+                width: 14.5rem;
+                margin-bottom: 2rem;
+              }
+            }
+          }
+        }
+      }
+
+      .latest-winners {
+        grid-area: lat;
+        margin-top: 0;
+
+        .winner-container {
+          height: 18rem;
+        }
+      }
+    }
+
+  }
+}
+
+.faq {
+  display: none;
+}
+
+@include responsive($xxl) {
+  .faq {
+    display: block;
+    margin-top: 3rem;
+
+    .container {
+      h2 {
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin-bottom: 2rem;
+      }
+
+      .faq-list {
+        width: 48.5rem;
+
+        li {
+          display: flex;
+          justify-content: space-between;
+          color: #0061A3;
+          font-size: 1.125rem;
+          font-weight: 500;
+          margin-left: 1.8rem;
+        }
+
+        hr {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+  .live-chat {
+    position: relative;
+    
+    .container {
+      position: absolute;
+      top: 50%;
+      left: 5%;
+
+      .whatsapp {
+        display: flex;
+        gap: 1rem;
+
+        div {
+          h2 {
+            font-size: 0.875rem;
+            font-weight: 500;
+          }
+
+          p {
+            font-size: 0.75rem;
+          }
+        }
+      }
+    }
+  }
+
+  .container {
+
+    h2 {
+      font-weight: 500;
+    }
+
+    .useful-link {
+      margin-top: 0.75rem;
+      display: flex;
+      gap: 1rem;
+
+      ul {
+        li {
+          font-size: 0.875rem;
+          margin-bottom: 0.3125rem;
+        }
+      }
+    }
+
+    .smart-winner {
+      margin-top: 1.25rem;
+
+      h2 {
+        font-size: 0.875rem;
+        font-weight: 500;
+        margin-bottom: 0.3rem;
+      }
+
+      p {
+        font-size: 0.625rem;
+        line-height: 0.875rem;
+        margin-bottom: 0.23rem;
+      }
+    }
+
+    .payment-security {
+      margin-top: 1.25rem;
+      display: flex;
+      gap: 2.5rem;
+      .bottom-desktop{
+        display: none;
+      }
+      .payments {
+        h2 {
+          font-size: 0.875rem;
+          font-weight: 500;
+          margin-bottom: 0.3rem;
+        }
+
+        .payment-card {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          gap: 0.625rem;
+        }
+      }
+
+      .security {
+        h2 {
+          font-size: 0.875rem;
+          font-weight: 500;
+          margin-bottom: 0.3rem;
+        }
+
+        .security-card {
+          .top {
+            display: flex;
+            gap: 0.3rem;
+          }
+
+          .bottom {
+            margin-top: 1rem;
+            display: flex;
+            gap: 0.3rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include responsive($xxl) {
+  .footer {
+    margin-bottom: 4rem;
+    h2 {
+      font-size: 1rem;
+    }
+    .live-chat {
+      max-width: 75rem;
+      margin: 0 auto;
+      .star-bg {
+        width: 100%;
+        height: 17rem;
+        object-fit: cover;
+      }
+    }
+    .container {
+      article {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        .useful-link {
+          flex-direction: column;
+          gap: 0;
+        }
+        .smart-winner {
+          width: 15.5rem;
+          margin-top: -1rem;
+          z-index: 99999;
+         
+        }
+        .payment-security {
+          flex-direction: column;
+          width: 9.5rem;
+          margin: 0;
+          .bottom-desktop {
+            margin-top: -5rem;
+            display: flex;
+            gap: 0.3rem;
+            z-index: 999999;
+          }
+          .security {
+            .security-card {
+              .bottom{
+                display: none;
+              }
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.question {
+  display: none;
+}
+
+@include responsive($xxl) {
+  .question {
+    display: block;
+    position: absolute;
+    top: 3rem;
+    left: 1.375rem;
+    h2 {
+      font-size: 1.2rem;
+      color: #f30000;
+      font-weight: 500;
+      margin-bottom: 1.2rem;
+    }
+    .con, .sales {
+      margin-bottom: 1.2rem;
+    }
+    .what {
+      font-size: 1.2rem;
+      color: #13902a;
+      font-weight: 500;
+    }
+  }
+}

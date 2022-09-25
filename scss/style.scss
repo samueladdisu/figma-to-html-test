@@ -35,7 +35,7 @@ header {
   display: none;
 }
 
-@include responsive($xxl) {
+@include responsive($xl) {
   header {
     margin-top: 1.875rem;
 
@@ -131,6 +131,21 @@ header {
   }
 }
 
+@include responsive($xl){
+  .banner {
+    img {
+      max-width: 60rem;
+    }
+  }
+}
+
+@include responsive($xxl){
+  .banner {
+    img {
+      max-width: 75rem;
+    }
+  }
+}
 .features {
   margin-top: 1rem;
 
@@ -172,7 +187,7 @@ header {
   }
 }
 
-@include responsive($xxl) {
+@include responsive($xl) {
   .features {
     .container {
       display: flex;
@@ -245,7 +260,7 @@ header {
   }
 }
 
-@include responsive($xxl) {
+@include responsive($xl) {
   .offers {
     .container {
       h1 {
@@ -359,7 +374,7 @@ header {
   }
 }
 
-@include responsive($xxl) {
+@include responsive($xl) {
   .lottery {
     .container {
       .lottery-card-container {
@@ -580,7 +595,7 @@ header {
   }
 }
 
-@include responsive($xxl) {
+@include responsive($xl) {
   .winners {
     .container {
       display: grid;
@@ -635,7 +650,7 @@ header {
   display: none;
 }
 
-@include responsive($xxl) {
+@include responsive($xl) {
   .faq {
     display: block;
     margin-top: 3rem;
@@ -777,7 +792,7 @@ header {
   }
 }
 
-@include responsive($xxl) {
+@include responsive($xl) {
   .footer {
     margin-bottom: 4rem;
     h2 {
@@ -835,7 +850,7 @@ header {
   display: none;
 }
 
-@include responsive($xxl) {
+@include responsive($xl) {
   .question {
     display: block;
     position: absolute;
